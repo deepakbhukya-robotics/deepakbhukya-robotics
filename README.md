@@ -483,20 +483,28 @@ Supported electronics, electrical design, documentation, and cross-functional co
 <div align="center">
 
 <a href="https://github.com/deepakbhukya-robotics">
-  <img height="195" src="https://github-readme-stats.vercel.app/api?username=deepakbhukya-robotics&show_icons=true&count_private=true&include_all_commits=true&hide_border=false&bg_color=0D1117&title_color=A78BFA&text_color=C4B5FD&icon_color=7C3AED&border_color=312E81&rank_icon=github" alt="Deepak Bhukya GitHub Statistics"/>
+  <img height="195"
+       src="https://github-stats-extended.vercel.app/api?username=deepakbhukya-robotics&show_icons=true&include_all_commits=true&hide_border=false&bg_color=0D1117&title_color=A78BFA&text_color=C4B5FD&icon_color=7C3AED&border_color=312E81&rank_icon=github"
+       alt="Deepak Bhukya GitHub Statistics"/>
 </a>
 
 <a href="https://git.io/streak-stats">
-  <img height="195" src="https://streak-stats.demolab.com?user=deepakbhukya-robotics&hide_border=false&background=0D1117&border=312E81&stroke=7C3AED&ring=A78BFA&fire=8B5CF6&currStreakNum=DDD6FE&sideNums=C4B5FD&currStreakLabel=A78BFA&sideLabels=8B5CF6&dates=9CA3AF" alt="Deepak Bhukya GitHub Streak"/>
+  <img height="195"
+       src="https://streak-stats.demolab.com?user=deepakbhukya-robotics&hide_border=false&background=0D1117&border=312E81&stroke=7C3AED&ring=A78BFA&fire=8B5CF6&currStreakNum=DDD6FE&sideNums=C4B5FD&currStreakLabel=A78BFA&sideLabels=8B5CF6&dates=9CA3AF"
+       alt="Deepak Bhukya GitHub Streak"/>
 </a>
 
 <br/>
 
 <a href="https://github.com/deepakbhukya-robotics?tab=repositories">
-  <img width="500" src="https://github-readme-stats.vercel.app/api/top-langs/?username=deepakbhukya-robotics&layout=compact&langs_count=10&hide_border=false&bg_color=0D1117&title_color=A78BFA&text_color=C4B5FD&border_color=312E81" alt="Deepak Bhukya Top Languages"/>
+  <img width="500"
+       src="https://github-stats-extended.vercel.app/api/top-langs/?username=deepakbhukya-robotics&layout=compact&langs_count=8&hide_border=false&bg_color=0D1117&title_color=A78BFA&text_color=C4B5FD&border_color=312E81"
+       alt="Deepak Bhukya Top Languages"/>
 </a>
 
 </div>
+
+---
 
 ---
 
