@@ -1,0 +1,61 @@
+name: Generate Contribution Snake
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+  workflow_dispatch:
+
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+concurrency:
+  group: contribution-snake
+  cancel-in-progress: true
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out profile repository
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Generate contribution snake SVG files
+        uses: Platane/snk/svg-only@v3.5.0
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg?color_snake=#8B5CF6&color_dots=#EBEDF0,#C4B5FD,#A78BFA,#7C3AED,#4F46E5
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#C4B5FD&color_dots=#161B22,#312E81,#4F46E5,#7C3AED,#A78BFA
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish SVG files to output branch
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          mkdir -p /tmp/snake-output
+          cp -r dist/. /tmp/snake-output/
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git checkout --orphan output
+          git rm -rf . || true
+          git clean -fdx
+
+          cp -r /tmp/snake-output/. .
+          touch .nojekyll
+
+          git add .
+          git commit -m "Generate contribution snake"
+          git push --force origin output
